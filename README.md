@@ -1,4 +1,4 @@
-*NOTE* This file just purely serves as documentation.
+*NOTE* This file just purely serves as documentation to understand the process of how DLL injection works.
 
 The main goal of this project is to understand how DLL injection works.  All of the code needed to run this program can be found within the main.cpp file.
 This code was taken from this blogpost https://kylehalladay.com/blog/2020/11/13/Hooking-By-Example.html .  The link to the following bloogpost is mainly
