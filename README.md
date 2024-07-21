@@ -12,6 +12,7 @@ DOCUMENTATION on main.cpp
 
 Main:
 -----
+In order to run this program you need to pass two arguments to it when using it via the terminal.  The first argument should be the process name your wish to inject your DLL file into and the second should be the path to the DLL file.  (usage: Injector_LoadLibrary <process name> <path to dll>).  
 
 Create Remote Thread:
 ---------------------
