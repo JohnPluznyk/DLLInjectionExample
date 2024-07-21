@@ -12,7 +12,9 @@ DOCUMENTATION on main.cpp
 
 Main:
 -----
-In order to run this program you need to pass two arguments to it when using it via the terminal.  The first argument should be the process name your wish to inject your DLL file into and the second should be the path to the DLL file.  (usage: Injector_LoadLibrary <process name> <path to dll>).  
+In order to run this program you need to pass two arguments to it when using it via the terminal.  The first argument should be the process name your wish to inject your DLL file into and the second should be the path to the DLL file.  (usage: Injector_LoadLibrary <process name> <path to dll>).  If the two arguments are not passed the printHelp function will be exectued and the program will terminate.
+
+After the two arguemnts are passed the program will reach this line of code (createRemoteThread(findPidByName(argv[1]), argv[2]);).  This line of code will take the two arguments passed.  The program will first execute the function (findPidByName) which is passed the processe's names that you wish to inject a DLL file into.
 
 Create Remote Thread:
 ---------------------
