@@ -1,4 +1,6 @@
-*NOTE* This file just purely serves as documentation to understand the process of how DLL injection works.
+DOCUMENTATION on main.cpp
+-------------------------
+*NOTE* This file just purely serves as documentation to understand the process of how DLL injection works.  The majority of the API calls used in the program are windows API calls so here is a link (https://en.wikibooks.org/wiki/Windows_Programming/Handles_and_Data_Types#:~:text=HANDLEs%20are%20defined%20as%20void,other%20words%20HANDLE%20%3D%20void*.) to an article I found online to help me understand this terminology.
 
 The main goal of this project is to understand how DLL injection works.  All of the code needed to run this program can be found within the main.cpp file.
 This code was taken from this blogpost https://kylehalladay.com/blog/2020/11/13/Hooking-By-Example.html .  The link to the following bloogpost is mainly
@@ -7,8 +9,6 @@ about function hooking and how it works on a x64 system.
 The reamineder of this readme file will just be documentation on how a program like this DLL Injection program works.  BTW this is my first time reading C++
 I am using ChatGPT plus to understand the functionality of this program.  I suggest to uye ChatGPT if any questions arise.
 
-DOCUMENTATION on main.cpp
--------------------------
 
 Main:
 -----
@@ -30,8 +30,13 @@ Variables "h" and "singleProcess":
 'PROCESSENTRY32 singleProcess':
 	- 'PROCESSENTRY32' is a structure that holds the information about a process
 
+"h = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);"
+	'CreateToolhelp32Snapshot' - This takes a snapshot of the processes currently running.
+	'TH32CS_SNAPPROCESS' - specifies that we want a snapshot of all processes
+	- The second argument ('0') is ignored when taking a snapshot of processes
+
+If the snapshot handle 'h' is invalid ('INVALID_HANDLE_VALUE'), the function returns '0'.
 
 Question:  Would the program be simpler in terms of code, if one could just simply enter the PID instead of typing the process name.
-
 Create Remote Thread:
 ---------------------
