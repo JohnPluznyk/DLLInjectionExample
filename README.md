@@ -37,6 +37,10 @@ Variables "h" and "singleProcess":
 
 If the snapshot handle 'h' is invalid ('INVALID_HANDLE_VALUE'), the function returns '0'.
 
+"singleProcess.dwSize = sizeof(PROCESSENTRY32);"
+	- The following line of code initializes the 'dwSize' member of the 'PROCESSENTRY32' structure to its size. This is required before using the structure with Process32FirstW and Process32NextW.
+
+
 Question:  Would the program be simpler in terms of code, if one could just simply enter the PID instead of typing the process name.
 Create Remote Thread:
 ---------------------
